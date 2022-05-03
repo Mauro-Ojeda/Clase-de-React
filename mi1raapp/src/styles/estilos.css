@@ -4,9 +4,44 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-body{
-  background-color:grey;
+main{
+  background-color:  #B4CFB0;
 }
-p{
-  color: rgb(0, 134, 211);
+section{
+  background-color:  #94B49F;
+}
+footer{
+  background-color: #789395 ;
+}
+nav{
+  margin: 1rem;
+}
+.links{
+  display: flex;
+}
+header li {
+  margin-left: 3rem;
+  text-decoration: none;
+  list-style: none;
+  color: rgb(63, 56, 68);
+}
+li a {
+  color: rgb(63, 56, 68);
+  text-decoration: none;
+}
+li a:hover{
+  color:#789395 ;
+}
+.logo{
+  margin: 1rem;
+}
+.titulo {
+  margin: 1rem; 
+}
+.titulo a {
+  text-decoration: none;
+  color:rgb(63, 56, 68) ;
+}
+.titulo a:hover{
+  color: #789395;
 }
