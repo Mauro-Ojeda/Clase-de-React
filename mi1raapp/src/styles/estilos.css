@@ -45,3 +45,6 @@ li a:hover{
 .titulo a:hover{
   color: #789395;
 }
+.carritoCantidad{
+  margin-left: 1rem;
+}

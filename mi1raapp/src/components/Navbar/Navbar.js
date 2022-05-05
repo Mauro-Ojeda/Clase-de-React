@@ -1,4 +1,6 @@
-function Navbar() {
+import React from "react";
+import CartWidget from "../CartWidget/CartWidget";
+export default function  Navbar(){
   const headerStyle = {
     display: "flex",
     fleWrap: "wrap",
@@ -15,9 +17,9 @@ function Navbar() {
       <ul className="links">
         <li><a href="productos.html">Productos</a></li>
         <li><a href="#footer">Contacto</a></li>
+        <li><a href="index.html"><CartWidget/></a></li>
       </ul>
       </nav>
       </header>
     );
-}
-export default Navbar;
+};
