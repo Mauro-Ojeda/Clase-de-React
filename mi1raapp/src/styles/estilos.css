@@ -18,6 +18,8 @@ nav{
 }
 .links{
   display: flex;
+  justify-content: space-around;
+  list-style: none;
 }
 header li {
   margin-left: 3rem;
@@ -47,4 +49,23 @@ li a:hover{
 }
 .carritoCantidad{
   margin-left: 1rem;
+}
+.App{
+  display: flex;
+  justify-content: space-around;
+}
+.card{
+  border: solid 3px #789395;
+  margin: 2px;
+  background-color: #94B49F;
+}
+.card button{
+  margin-left: 30%;
+}
+.imgCard{
+  width: 10rem;
+  height: 10rem;
+}
+.textCenter{
+  text-align: center;
 }

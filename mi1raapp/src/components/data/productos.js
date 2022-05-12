@@ -1,0 +1,30 @@
+export const products = [
+  {
+    id:1,
+    title:"Boston",
+    stock:3,
+    price:100,
+    images:"images/boston.png",
+  },
+  {
+    id:1,
+    title:"Toronto",
+    stock:6,
+    price:104,
+    images:"images/toronto.png",
+  },
+  {
+    id:1,
+    title:"New York",
+    stock:8,
+    price:109,
+    images:"images/nyk.png",
+  },
+  {
+    id:1,
+    title:"Heat",
+    stock:1,
+    price:105,
+    images:"images/heat2.png",
+  },
+]
