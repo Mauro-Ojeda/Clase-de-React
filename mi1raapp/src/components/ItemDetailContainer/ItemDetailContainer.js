@@ -1,7 +1,7 @@
 import React, { useEffect,useState } from "react";
 import {promesa} from "../../data/database";
-import ItemList from "../ItemList/ItemList";
-export default function ItemListContainer(){
+import ItemDetail from "../ItemDetail/ItemDetail";
+export default function ItemDetailContainer(){
   const [productos, setProducts] =useState([]);
   console.log(promesa)
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function ItemListContainer(){
   return(
     <>
     <div>
-  <ItemList productos={productos}/>
+  <ItemDetail productos={productos}/>
   </div>
 </>
 );

@@ -2,6 +2,7 @@ import React from "react"
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 function App(){
   return (
     <>
@@ -13,8 +14,7 @@ function App(){
     </div>
     </main>
     <section>
-    <h2 className="textCenter">Lorem</h2>
-      <p className="textCenter">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ullam voluptatum consequuntur quia ipsum iure sequi exercitationem blanditiis aperiam maiores. Consequatur dolorum odio temporibus explicabo saepe, cumque reiciendis provident doloremque.</p>
+    <ItemDetailContainer/>
     </section>
     <Footer />
     </>

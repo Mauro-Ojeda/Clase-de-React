@@ -76,3 +76,32 @@ li a:hover{
   align-items: center;
   margin: 1rem;
 }
+.Detalle{
+  display: flex;
+  justify-content: center;
+}
+.ImgDetalle{
+  margin: 1rem;
+  width: 18rem;
+  height: 18rem;
+}
+.comprarBtn{
+  height: 3rem;
+  width: 5rem;
+  background-color: #789395;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+.Detalle .precio{
+  align-self: flex-start;
+  justify-self: center;
+  margin: 1rem;
+}
+.Detalle .stock{
+  align-self: flex-end;
+  margin: 1rem;
+}
+.Detalle .desc{
+  align-self: center;
+  margin: 1rem;
+}

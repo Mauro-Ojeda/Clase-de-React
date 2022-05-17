@@ -1,4 +1,9 @@
 export default function Item ({product}) {
+  function handleClick(e){
+    e.preventDefault();
+    console.log(product.id);
+    localStorage.setItem('detalle',JSON.stringify (product));
+  }
   return (
     <>
     <div className="card">
@@ -6,7 +11,7 @@ export default function Item ({product}) {
       <h3 className="textCenter">{product.title}</h3>
       <p className="textCenter">Stock: {product.stock}</p>
       <p className="textCenter">Price : {product.price}</p>
-      <button>Ver más</button>
+      <button onClick={handleClick}>Ver más</button>
     </div>
     </>
   );
