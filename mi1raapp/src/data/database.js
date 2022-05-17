@@ -28,3 +28,14 @@ export const products = [
     images:"images/heat2.png",
   },
 ]
+
+export const promesa = new Promise((resolve, reject) => {
+  let condicion = true;
+  setTimeout(() => {
+    if (condicion){
+      resolve(products);
+    }else{
+      reject("La comunicacion Fallo");
+    }
+  }, 3000)
+})

@@ -69,3 +69,10 @@ li a:hover{
 .textCenter{
   text-align: center;
 }
+.cards{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1rem;
+}

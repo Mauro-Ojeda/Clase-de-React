@@ -1,18 +1,19 @@
 
-import React from "react";
-import ItemCount from "./ItemCount"
+import React, { useEffect,useState } from "react";
+import {promesa} from "../../data/database";
+import ItemList from "../ItemList/ItemList";
 export default function ItemListContainer(){
+  const [productos, setProducts] =useState([]);
+  console.log(promesa)
+  useEffect(() => {
+    promesa
+    .then((result) => setProducts(result))
+    .catch((error) => console.log(error))
+  },[])
   return(
     <>
     <div>
-  <h3>Titulo</h3>
-  <img src=""alt="a"></img>
-  <p></p>
-  <p>talle</p>
-  <p>descripcion</p>
-  <p>stock = 5</p>
-  <h4>Cantidad</h4>
-  <ItemCount/>
+  <ItemList productos={productos}/>
   </div>
 </>
 );
