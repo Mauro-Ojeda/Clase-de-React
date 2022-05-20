@@ -1,21 +1,24 @@
-import React from "react"
-import Navbar from "./components/Navbar/Navbar";
+import React from "react";
+import {BrowserRouter , Routes , Route} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import Home from "./views/Home/Home";
+import Products from "./views/Products/Products";
+import Cart from "./views/Cart/Cart";
+import Product from "./views/Product/Product";
+import Category from "./views/Category/Category";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 function App(){
   return (
     <>
-    <Navbar />
-    <main>
-      <h2 className="textCenter">Productos</h2>
-      <div className="App">
-        <ItemListContainer/>
-    </div>
-    </main>
-    <section>
-    <ItemDetailContainer/>
-    </section>
+    <BrowserRouter>
+    <Routes>
+    <Route exact path="*" element={<Home/>} />
+    <Route exact path="/products" element={<Products/>} />
+    <Route exact path="/product" element={<ItemDetailContainer/>} />
+    <Route exact path="/cart" element={<Cart/>} />
+    <Route exact path="/category/:id" element={<Category/>} />
+    </Routes>
+    </BrowserRouter>
     <Footer />
     </>
     );

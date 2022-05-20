@@ -5,9 +5,9 @@ function Footer (){
     <footer>
     <div>
   <ul className="links">
-    <li><a href="index.html"> Instagram</a></li>
-    <li><a href="index.html">Facebook</a></li>
-    <li ><a  href="index.html">Twitter</a></li>
+    <li><a href="{}"> Instagram</a></li>
+    <li><a href="{}">Facebook</a></li>
+    <li ><a  href="{}">Twitter</a></li>
   </ul>
   </div>
   </footer>

@@ -3,7 +3,6 @@ import {promesa} from "../../data/database";
 import ItemList from "../ItemList/ItemList";
 export default function ItemListContainer(){
   const [productos, setProducts] =useState([]);
-  console.log(promesa)
   useEffect(() => {
     promesa
     .then((result) => setProducts(result))

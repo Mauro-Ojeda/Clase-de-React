@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Item ({product}) {
   function handleClick(e){
     e.preventDefault();
@@ -11,7 +12,7 @@ export default function Item ({product}) {
       <h3 className="textCenter">{product.title}</h3>
       <p className="textCenter">Stock: {product.stock}</p>
       <p className="textCenter">Price : {product.price}</p>
-      <button onClick={handleClick}>Ver más</button>
+      <button onClick={handleClick}><Link to="/product"> Ver más </Link> </button>
     </div>
     </>
   );
