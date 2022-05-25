@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
 export default function Item ({product}) {
-  function handleClick(e){
-    e.preventDefault();
-    console.log(product.id);
-    localStorage.setItem('detalle',JSON.stringify (product));
-  }
   return (
     <>
     <div className="card">
@@ -12,7 +7,8 @@ export default function Item ({product}) {
       <h3 className="textCenter">{product.title}</h3>
       <p className="textCenter">Stock: {product.stock}</p>
       <p className="textCenter">Price : {product.price}</p>
-      <button onClick={handleClick}><Link to="/product"> Ver más </Link> </button>
+      <p className="textCenter">Talle : {product.talle}</p>
+      <button><Link to={`/detail/${product.id}`}> Ver más </Link> </button>
     </div>
     </>
   );
