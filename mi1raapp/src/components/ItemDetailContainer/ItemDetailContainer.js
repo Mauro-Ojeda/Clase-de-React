@@ -5,7 +5,6 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 export default function ItemDetailContainer(){
   const {detailId}  = useParams();
   const [producto, setProducto] =useState([]);
-  console.log(promesa)
   useEffect(() => {
     promesa
     .then((result) => setProducto(result.find((item)=> item.id === Number(detailId))))
@@ -14,7 +13,7 @@ export default function ItemDetailContainer(){
   return(
     <>
     <div className="fondo">
-  <ItemDetail productos={producto}/>
+  <ItemDetail product={producto}/>
   </div>
 </>
 );

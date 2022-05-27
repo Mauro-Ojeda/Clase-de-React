@@ -1,10 +1,19 @@
 import React from "react";
-import ItemCount from "../ItemListContainer/ItemCount";
+import {CartProvider} from "../../components/CartContext/CartContext";
+// import ItemCount from "../ItemListContainer/ItemCount";
 import BtnBuy from "../BtnBuy/BtnBuy";
-const ItemDetail = () => {
-  const product=JSON.parse(localStorage.getItem('detalle'));
+import { useContext } from "react";
+const ItemDetail = ({product}) => {
+  const {addItemToCart} = useContext(CartProvider)
+  const onAdd = (quantityToAdd) => {
+    product.quantity = quantityToAdd;
+    product.finalValue = product.price * product.quantity;
+    product.agregado = true;
+    addItemToCart(product, quantityToAdd);
+  };
   return (
     <>
+    <CartProvider>
     <h2 className="textCenter">Detalle</h2>
     <h3 className="textCenter">{product.title}</h3>
     <div class="Detalle">
@@ -12,10 +21,12 @@ const ItemDetail = () => {
     <p className="textCenter precio">Price $:{product.price}</p>
     <p className="textCenter desc">{product.descripcion}</p>
     <p className="textCenter stock">Stock:{product.stock}</p>
-    <ItemCount />
+    <button className="textCenter"onClick={onAdd} >Agregar</button>
     <BtnBuy/>
     </div>
+    </CartProvider>
   </>
   );
 }
 export default ItemDetail; 
+// 

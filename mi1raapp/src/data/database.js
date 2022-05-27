@@ -7,6 +7,7 @@ export const products = [
     images:"/images/boston.png",
     descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ullam voluptatum consequuntur quia ipsum iure sequi exercitationem blanditiis aperiam maiores. Consequatur dolorum odio temporibus explicabo saepe, cumque reiciendis provident doloremque.",
     talle:1,
+    quantity:1,
   },
   {
     id:2,
@@ -16,6 +17,7 @@ export const products = [
     images:"/images/toronto.png",
     descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ullam voluptatum consequuntur quia ipsum iure sequi exercitationem blanditiis aperiam maiores. Consequatur dolorum odio temporibus explicabo saepe, cumque reiciendis provident doloremque.",
     talle:1,
+    quantity:1,
   },
   {
     id:3,
@@ -25,6 +27,7 @@ export const products = [
     images:"/images/nyk.png",
     descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ullam voluptatum consequuntur quia ipsum iure sequi exercitationem blanditiis aperiam maiores. Consequatur dolorum odio temporibus explicabo saepe, cumque reiciendis provident doloremque.",
     talle:2,
+    quantity:1,
   },
   {
     id:4,
@@ -34,6 +37,7 @@ export const products = [
     images:"/images/heat2.png",
     descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ullam voluptatum consequuntur quia ipsum iure sequi exercitationem blanditiis aperiam maiores. Consequatur dolorum odio temporibus explicabo saepe, cumque reiciendis provident doloremque.",
     talle:3,
+    quantity:1,
   },
 ]
 
@@ -45,5 +49,5 @@ export const promesa = new Promise((resolve, reject) => {
     }else{
       reject("La comunicacion Fallo");
     }
-  }, 1000)
+  }, 0);
 })

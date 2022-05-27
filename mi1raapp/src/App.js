@@ -6,9 +6,12 @@ import Products from "./views/Products/Products";
 import Cart from "./views/Cart/Cart";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Header from "./components/Header/Header";
+import CustomProvider from "./components/CartContext/CartContext";
+
 export default function App(){
   return (
     <>
+    <CustomProvider>
     <BrowserRouter>
     <Header/>
     <Routes>
@@ -20,6 +23,8 @@ export default function App(){
     </Routes>
     </BrowserRouter>
     <Footer />
+    </CustomProvider>
+    
     </>
     );
 };
