@@ -13,24 +13,26 @@ export default function Cart({ item }) {
             )
     }
     else {
-        return(<>
-                {cart.map((item, index) => {
-                    return <div key={item.id} className='container'>
-                            <div className='card'>
-                                <div className='img'>
-                                  <img src={item.images} alt="" />
-                                </div>
-                                <div className='content'>
-                                  <div className='productName'> {item.title} </div>
-                                </div>
-                                  <p> Quantity: {item.quantity}</p>
-                                  <div className='price'> $ {item.price} </div>
-                                <button onClick={() => (item)}> Delete Product </button> 
-                            </div>
-                        </div>
-                })}
-                </>
-            )
+      return (
+        <>
+        <h1> Carrito </h1>
+          {cart.map((item, index) => {
+            return <div key={item.id} className='container'>
+              <div className='card'>
+                <div className='img'>
+                  <img src={item.images} alt="" />
+                </div>
+                <div className='content'>
+                  <div className='productName'> {item.title} </div>
+                </div>
+                <p> Quantity: {item.quantity}</p>
+                <div className='price'> $ {item.price} </div>
+                <button onClick={() => (item)}> Delete Product </button>
+              </div>
+            </div>
+          })}
+        </>
+      )
         }
     }
 

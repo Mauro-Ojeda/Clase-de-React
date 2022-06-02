@@ -8,14 +8,7 @@ export default function ItemCount({count,setCount,stock,onAdd}) {
       {count}
       <input className="botonCantidad" type="button" value="-" onClick={() =>count===1 ? console.log('no puede ser menor a 1'): setCount  (count- 1)}/>
     </div>
-      <button className="textCenter"onClick={() => {onAdd(count)}} >Agregar</button>
+      <button className="textCenter comprarBtn"onClick={onAdd} >Agregar</button>
     </>
   );
   };
-  // const AddToCart=()=>(
-  //   <button onClick={()=>setAction('carrito')}>Comprar</button>
-  // )
-  // const ToCart =()=>(
-  //   <button> <BtnBuy/>  </button>
-  // )
-  // const Button = action === 'comprar' ? AddToCart : ToCart;

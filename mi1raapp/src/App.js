@@ -1,5 +1,6 @@
 import React from "react";
 import {BrowserRouter , Routes , Route} from "react-router-dom";
+import { CartProvider } from "./components/CartContext/CartContext";
 import Footer from "./components/Footer/Footer";
 import Home from "./views/Home/Home";
 import Products from "./views/Products/Products";
@@ -10,7 +11,7 @@ import Header from "./components/Header/Header";
 export default function App(){
   return (
     <>
-    {/* <CustomProvider> */}
+    <CartProvider>
     <BrowserRouter>
     <Header/>
     <Routes>
@@ -22,7 +23,7 @@ export default function App(){
     </Routes>
     </BrowserRouter>
     <Footer />
-    {/* </CustomProvider> */}
+    </CartProvider>
     
     </>
     );
