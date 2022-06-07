@@ -24,7 +24,6 @@ export default function App(){
     </BrowserRouter>
     <Footer />
     </CartProvider>
-    
     </>
     );
 };

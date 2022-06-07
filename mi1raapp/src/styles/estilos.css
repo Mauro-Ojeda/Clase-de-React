@@ -116,3 +116,10 @@ li a:hover{
   align-self: center;
   margin: 1rem;
 }
+.cartContainer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1rem;
+}
