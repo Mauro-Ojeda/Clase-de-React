@@ -3,6 +3,25 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "./styles/estilos.css"
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDZWkJZBZGJWpxBuPtrZDuxzEI31ZRIQHU",
+  authDomain: "react-1204d.firebaseapp.com",
+  projectId: "react-1204d",
+  storageBucket: "react-1204d.appspot.com",
+  messagingSenderId: "324253435267",
+  appId: "1:324253435267:web:d8f5ef636f0d4596daa2b6"
+};
+
+// Initialize Firebase
+initializeApp(firebaseConfig);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
