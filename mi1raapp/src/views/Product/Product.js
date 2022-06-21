@@ -3,6 +3,6 @@ import ItemDetailContainer from "../../components/ItemDetailContainer/ItemDetail
 export default function Producto(){
   <div  className="fondo">
     <h1> Detalle</h1>
-    <ItemDetailContainer/>
+    <ItemDetailContainer />
   </div>
 }

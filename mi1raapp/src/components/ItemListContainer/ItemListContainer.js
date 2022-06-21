@@ -1,7 +1,6 @@
-import React, { useEffect,useState } from "react";
-import {promesa} from "../../data/database";
+import React, {useState } from "react";
 import ItemList from "../ItemList/ItemList";
-import { getFirestore ,getDoc, doc, collection, getDocs } from "firebase/firestore";
+import { getFirestore , collection, getDocs } from "firebase/firestore";
 
 export default function ItemListContainer({categoryId}) {
   const [productos, setProducts] =useState([]);
@@ -13,17 +12,6 @@ export default function ItemListContainer({categoryId}) {
       setProducts(snapshot.docs.map(doc =>({id:doc.id, ...doc.data()})));
     })
   }, []);
-  // useEffect(() => {
-  //   promesa
-  //   .then((result) => {
-  //     if (categoryId){
-  //       setProducts(result.filter((Item) => Item.talle === Number(categoryId)));
-  //     }else{
-  //       setProducts(result);
-  //     }
-  //   })
-  //   .catch((error) => console.log(error))
-  // },[categoryId])
   return(
     <>
     <div>
