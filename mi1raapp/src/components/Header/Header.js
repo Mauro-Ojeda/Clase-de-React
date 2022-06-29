@@ -20,10 +20,10 @@ export default function Header(){
       <div className="logo">🏀</div>
       <div className="titulo"><span><Link to="/">NBA Shop</Link> </span></div>
       <CartWidget/>
-      <div><Link to="products" style={linkStyle}>Productos</Link></div>
-      <div><Link to="/category/1" style={linkStyle}>Talle 1</Link></div>
-      <div><Link to="/category/2" style={linkStyle}>Talle 2</Link></div>
-      <div><Link to="/category/3" style={linkStyle}>Talle 3</Link></div>
+      <div  className="titulo"><Link to="products" style={linkStyle}>Productos</Link></div>
+      <div  className="titulo"><Link to="/category/1" style={linkStyle}>Talle 1</Link></div>
+      <div  className="titulo"><Link to="/category/2" style={linkStyle}>Talle 2</Link></div>
+      <div  className="titulo"><Link to="/category/3" style={linkStyle}>Talle 3</Link></div>
     </div>
   )
 }

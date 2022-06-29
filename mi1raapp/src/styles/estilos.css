@@ -1,17 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;;
 }
 main{
   background-color:  #B4CFB0;
 }
 .fondo{
   background-color: #B4CFB0;
-}
-section{
-  background-color:  #94B49F;
 }
 footer{
   background-color: #789395 ;
@@ -60,6 +59,7 @@ li a:hover{
 }
 .carritoCantidad{
   margin-left: 1rem;
+  color:#789395;
 }
 .App{
   display: flex;
@@ -122,4 +122,26 @@ li a:hover{
   flex-wrap: wrap;
   align-items: center;
   margin: 1rem;
+}
+.container{
+  display: flex;
+  justify-content: center;
+}
+.container2{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.Btn{
+  height: 3rem;
+  width: 5rem;
+  background-color:  #94B49F;
+  align-self: flex-end;
+  margin: 1rem;
+}
+.btnVer{
+  background-color:  #B4CFB0;
+}
+.fondo2{
+  background-color: #94B49F;
 }

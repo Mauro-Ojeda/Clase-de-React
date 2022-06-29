@@ -12,6 +12,7 @@ export function CartProvider ({ children }) {
       return [];
     }
   })
+
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
   }, [cartItems])
@@ -34,8 +35,8 @@ export function CartProvider ({ children }) {
   }
 
     const deleteItemToCart = (product) => {
+
       const inCart = cartItems.find((productInCart) => productInCart.id === product.id);
-      
       if(inCart.quantity === 1) {
         setCartItems(
           cartItems.filter((productInCart) => productInCart.id !== product.id)
@@ -48,18 +49,25 @@ export function CartProvider ({ children }) {
         })
     }
   }
+
   const deleteItem = (id) => {
-    setCartItems(cartItems.filter((prod) => prod.id !== id));
+    const newCart = [...cartItems];
+    newCart.splice(id, 1);
+    setCartItems(newCart);
   }
+  
+  
   const clearCart = () => {
     setCartItems([]);
   }
-  const itemQuantityOnCart = (id) => {
+  const itemQuantityOnCart = () => {
     return cartItems.reduce((acc, prod) => acc +=prod.quantity,0 )
   }
+
   const cartPrice = () => {
-    return cartItems.reduce((acc, prod) => acc +=prod.price,0 )
+    return cartItems.reduce((acc, prod) => acc +=prod.price * prod.quantity,0 )
   }
+
 return (
   <CartContext.Provider value={{cartItems,clearCart,cartPrice,addItemToCart,deleteItemToCart,deleteItem,itemQuantityOnCart}}>
     {children}
@@ -67,6 +75,6 @@ return (
   )
 }
 
-export const useCart = () => useContext(CartContext);
+export   const useCart = () => useContext(CartContext);
 
 

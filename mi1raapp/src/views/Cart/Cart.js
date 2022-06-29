@@ -1,50 +1,46 @@
-import { Link } from 'react-router-dom'
-import { useCart } from '../../components/CartContext/CartContext'
+import { Link, useNavigate } from 'react-router-dom'
+import { useCart } from '../../CartContext/CartContext'
+
 
 export default function Cart({}) {
+  const navegar = useNavigate();
     const {clearCart,cartItems,deleteItem,cartPrice,itemQuantityOnCart} = useCart()
     if(cartItems.length === 0) {
-        return(<>
-              <h4> No hay nada en el carrito </h4>
-                <Link to={"/"} > Products </Link>
-                </>
-            )
+        return(
+      <> <div className='fondo'>
+        <div className='container'>
+        <h4 className='titulo textCenter'> No hay nada en el carrito , Vamos de Compras </h4>
+        <Link className='titulo textCenter' to={"/"} > Productos </Link>
+        </div></div>
+      </>
+      )
     }
     else {
+
       return (
-        <>
-        <h1 className='textCenter'> Carrito </h1>
+        <> 
+        <div className='fondo'>
+        <h1 className='textCenter fondo2'> Carrito </h1>
         <div className="cartContainer">
         {cartItems.map(item => (<div className="cartItem"> 
+        <p className="textCenter desc fondo2">{item.title}</p>
         <img src={item.images} alt="Imagen" className="ImgDetalle"/>
-        <p className="textCenter desc">{item.title}</p>
         <p className="textCenter precio">Price $:{item.price}</p>
-        <button onClick={()=> deleteItem()}>Borrar Item</button>
+        <p className="textCenter precio">Cantidad :{item.quantity}</p>
+        <button onClick={deleteItem} className='comprarBtn'>X</button>
         </div>))}
         </div>
+        <div className='fondo2'>
         <p className="textCenter precio">Total: ${cartPrice()}</p>
         <p className='textCenter'>Items Totales {itemQuantityOnCart()}</p>
-        <button className="comprarBtn" onClick={()=>{clearCart()}}> Vaciar Cart </button>
-        <button className="comprarBtn" onClick={()=>{}}> Comprar </button>
+        </div>
+        <button className="comprarBtn"  onClick={clearCart}> Vaciar Cart </button>
+        <button className="comprarBtn" onClick={()=>{navegar('/checkout')}}> Comprar </button>
+        </div>
         </>
       )
         }
     }
-    // {cart.map((item, index) => {
-    //   return <div key={item.id} className='container'>
-    //     <div className='card'>
-    //       <div className='img'>
-    //         <img src={item.images} alt="" />
-    //       </div>
-    //       <div className='content'>
-    //         <div className='productName'> {item.title} </div>
-    //       </div>
-    //       <p> Quantity: {item.quantity}</p>
-    //       <div className='price'> $ {item.price} </div>
-    //       <button onClick={() => (item)}> Delete Product </button>
-    //     </div>
-    //   </div>
-    // })}
 
 
 
